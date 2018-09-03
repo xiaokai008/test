@@ -1,0 +1,14 @@
+com\cg\service\UserAddressService.class
+com\cg\service\OrderService.class
+com\cg\service\impl\OrderServiceImpl.class
+com\cg\service\CarVoService.class
+com\cg\service\impl\ProductServiceImpl.class
+com\cg\service\impl\ProductCategoryServiceImpl.class
+com\cg\service\ProductCategoryService.class
+com\cg\service\impl\NewsServiceImpl.class
+com\cg\service\impl\CarVoServiceImpl.class
+com\cg\service\impl\UserAddressServiceImpl.class
+com\cg\service\UserService.class
+com\cg\service\ProductService.class
+com\cg\service\NewsService.class
+com\cg\service\impl\UserServiceImpl.class

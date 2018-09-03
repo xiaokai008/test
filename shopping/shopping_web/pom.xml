@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>shopping</artifactId>
+        <groupId>com.gc</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+    <packaging>war</packaging>
+    <artifactId>shopping_web</artifactId>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.gc</groupId>
+            <artifactId>shopping_service</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+
+    </dependencies>
+
+
+
+
+    <!--配置tomcat插件-->
+    <build>
+    <plugins>
+        <plugin>
+            <groupId>org.apache.tomcat.maven</groupId>
+            <artifactId>tomcat7-maven-plugin</artifactId>
+            <configuration>
+                <path>/</path>
+                <port>8081</port>
+                <url>http://192.168.59.150:8081/manager/text</url>
+                <username>tomcat</username>
+                <password>tomcat</password>
+            </configuration>
+        </plugin>
+
+        <plugin>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-maven-plugin</artifactId>
+            <configuration>
+                <executable>true</executable>
+                <mainClass>co.yiiu.AdminApplication</mainClass>
+                <includeSystemScope>true</includeSystemScope>
+            </configuration>
+            <executions>
+                <execution>
+                    <configuration>
+                        <classifier>exec</classifier>
+                    </configuration>
+                </execution>
+            </executions>
+
+        </plugin>
+    </plugins>
+
+    </build>
+</project>

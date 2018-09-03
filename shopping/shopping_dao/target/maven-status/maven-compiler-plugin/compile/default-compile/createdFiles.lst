@@ -1,0 +1,7 @@
+com\cg\mybatis\mapper\OrderMapper.class
+com\cg\mybatis\mapper\NewsMapper.class
+com\cg\mybatis\mapper\ProductCategoryMapper.class
+com\cg\mybatis\mapper\ProductMapper.class
+com\cg\mybatis\mapper\UserMapper.class
+com\cg\mybatis\mapper\UserAddressMapper.class
+com\cg\mybatis\mapper\OrderDetailMapper.class

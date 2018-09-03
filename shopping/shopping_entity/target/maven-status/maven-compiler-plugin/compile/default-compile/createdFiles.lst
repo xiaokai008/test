@@ -1,0 +1,13 @@
+com\cg\mybatis\pojo\ProductCategory.class
+com\cg\mybatis\pojo\News.class
+com\cg\mybatis\pojo\UserAddress.class
+com\cg\mybatis\pojo\Order.class
+com\cg\mybatis\pojo\Cart.class
+com\cg\mybatis\pojo\ProductQueryVo.class
+com\cg\vo\ProductCategoryVo.class
+com\cg\mybatis\pojo\StaticVar.class
+com\cg\mybatis\pojo\CartVo.class
+com\cg\mybatis\pojo\User.class
+com\cg\mybatis\pojo\OrderDetail.class
+com\cg\mybatis\pojo\Pager.class
+com\cg\mybatis\pojo\Product.class

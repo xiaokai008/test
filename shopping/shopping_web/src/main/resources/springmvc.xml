@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+        http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd">
+    <!--配制controller扫描包  扫描@Controler @Service-->
+    <context:component-scan base-package="com.cg.controller"></context:component-scan>
+
+    <!--&lt;!&ndash;配置处理器映射器&ndash;&gt;-->
+    <!--<bean class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping"></bean>-->
+
+    <!--&lt;!&ndash;配置处理器适配器&ndash;&gt;-->
+    <!--<bean class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter"></bean>-->
+
+    <!--注解驱动-->
+    <!--直接配置处理器映射器和处理器适配器比较麻烦，可以使用注解驱动来加载。
+SpringMVC使用<mvc:annotation-driven>自动加载RequestMappingHandlerMapping和RequestMappingHandlerAdapter-->
+    <mvc:annotation-driven></mvc:annotation-driven>
+
+    <!--&lt;!&ndash;配置conveter转换器 转换工厂 （日期 ， 去掉前后空格)&ndash;&gt;-->
+    <!--<bean id="conversionServiceFactoryBean" class="org.springframework.format.support.FormattingConversionServiceFactoryBean">-->
+
+        <!--&lt;!&ndash;配置多个转换器&ndash;&gt;-->
+        <!--<property name="converters">-->
+            <!--<list>-->
+                <!--<bean class="com.itheima.conversion.DateConveter"></bean>-->
+            <!--</list>-->
+        <!--</property>-->
+    <!--</bean>-->
+
+    <!--Example: prefix=“/WEB-INF/jsp/”,suffix="".sjp
+    viewname="test"
+    -->
+    <!--&lt;!&ndash;配置视图解析器&ndash;&gt;-->
+    <!--<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">-->
+        <!--&lt;!&ndash;配置逻辑视图的前缀&ndash;&gt;-->
+        <!--<property name="prefix" value="/jsp/"></property>-->
+        <!--&lt;!&ndash;配置逻辑视图的后缀&ndash;&gt;-->
+        <!--<property name="suffix" value=".jsp"></property>-->
+    <!--</bean>-->
+
+    <!--配置全局异常处理器-->
+    <!--<bean id="customHandleException" class="com.itheima.execption.CustomHandleException"></bean>-->
+
+    <!--&lt;!&ndash;自定义拦截器&ndash;&gt;-->
+    <mvc:interceptors>
+        <mvc:interceptor>
+            <!--拦截地址-->
+            <mvc:mapping path="/sys/**"/>
+            <bean class="com.cg.interceptor.LoginInterceptor"></bean>
+        </mvc:interceptor>
+    </mvc:interceptors>
+
+    <!--文件上传-->
+    <!--<bean id="multipartResolver"-->
+          <!--class="org.springframework.web.multipart.commons.CommonsMultipartResolver">-->
+        <!--&lt;!&ndash; set the max upload size100MB &ndash;&gt;-->
+
+        <!--&lt;!&ndash;-->
+        <!--1kb = 1024byte-->
+        <!--1k = 1000byte-->
+
+        <!--&ndash;&gt;-->
+        <!--<property name="maxUploadSize">-->
+            <!--<value>104857600</value>-->
+        <!--</property>-->
+        <!--<property name="maxInMemorySize">-->
+            <!--<value>4096</value>-->
+        <!--</property>-->
+        <!--<property name="defaultEncoding">-->
+            <!--<value>utf-8</value>-->
+        <!--</property>-->
+    <!--</bean>-->
+
+
+</beans>
