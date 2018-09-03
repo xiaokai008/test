@@ -1,0 +1,15 @@
+自我介绍：时间：半分钟-一分钟左右
+         基本信息（1-2句话）：姓名、来自哪里
+         会 什 么：技术点：spring、mybatis、redis
+                          maven、svn/git、mysql、memcache、sqlServer                           easyUI、linux、springboot
+                          spring jdbc、spring could
+                   web层框架：springmvc、struts2
+                   持久层框架：hibernate、mybatis
+                   管理框架：spring
+                   前端框架：easyui、Bootstrap、
+                   代码管理：svn、git
+                   项目管理：maven
+         做过什么项目：
+             通过项目将技术点串联起来
+         兴趣爱好、特长（1-2句话）：
+面 试 题：java多线程、IO、网络、java8新特性、本地线程
